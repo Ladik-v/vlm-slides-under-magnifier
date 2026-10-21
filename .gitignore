@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+data/slides/
+own_slides/*
+!own_slides/questions.csv

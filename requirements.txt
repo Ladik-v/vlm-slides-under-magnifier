@@ -1,0 +1,10 @@
+mlx-vlm
+pillow
+numpy
+scipy
+pandas
+matplotlib
+gradio
+datasets
+huggingface_hub
+jupyter

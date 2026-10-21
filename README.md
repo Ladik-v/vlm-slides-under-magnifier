@@ -1,6 +1,6 @@
 # Slides under a magnifying glass: a VLM with crop and zoom
 
-Course project (GenAI, New Economic School, AIFT). A vision-language model, Qwen3-VL-4B-Instruct, answers questions about presentation slides that need a small detail: a label, a number on a chart, a link between blocks. We give it a crop/zoom tool, let it pick regions, and measure whether zooming helps compared with looking at the whole slide.
+Course project. A vision-language model, Qwen3-VL-4B-Instruct, answers questions about presentation slides that need a small detail: a label, a number on a chart, a link between blocks. We give it a crop/zoom tool, let it pick regions, and measure whether zooming helps compared with looking at the whole slide.
 
 Main result on 120 SlideVQA test questions: zoom did not help. A single view of the slide at its native resolution (768 visual tokens) scores 0.79 exact match at about 800 tokens per question. The zoom agent with the same first look scores 0.71 at about 2660 tokens. SlideVQA slides are only 1024 px on the long side, so a downscaled overview loses little and zoom has little to recover. The own-slides experiment (section 6 of the notebook) is meant to test slides with a higher resolution.
 

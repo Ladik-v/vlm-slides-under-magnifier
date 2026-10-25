@@ -4,7 +4,7 @@ import os
 import random
 from collections import defaultdict
 import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 DETAIL_TYPES = ['axis_label', 'chart_value', 'small_text', 'block_relation']
 OWN_COLUMNS = ['id', 'image', 'question', 'answer', 'detail_type']
@@ -85,36 +85,3 @@ def load_own(path='own_slides/questions.csv'):
                 continue
             out.append({'id': r['id'], 'question': r['question'], 'answers': [a.strip() for a in r['answer'].split(';') if a.strip()], 'image': os.path.basename(r['image']), 'answer_type': r['detail_type'], 'detail_type': r['detail_type']})
     return out
-
-
-def _font(size):
-    try:
-        return ImageFont.load_default(size=size)
-    except TypeError:
-        return ImageFont.load_default()
-
-
-def make_synthetic(root, n=12, seed=0, size=(1280, 720)):
-    os.makedirs(os.path.join(root, 'slides'), exist_ok=True)
-    rng = random.Random(seed)
-    names = ['Sales', 'Costs', 'Profit', 'Users', 'Churn', 'Growth']
-    items = []
-    for i in range(n):
-        im = Image.new('RGB', size, 'white')
-        d = ImageDraw.Draw(im)
-        d.text((40, 20), f'Quarterly report {i + 1}', fill='black', font=_font(36))
-        vals = [rng.randint(10, 99) for _ in names]
-        for j, (nm, v) in enumerate(zip(names, vals)):
-            x = 120 + j * 170
-            top = 660 - v * 5
-            d.rectangle([x, top, x + 100, 660], fill=(60, 90, 200))
-            d.text((x + 25, top - 18), str(v), fill='black', font=_font(14))
-            d.text((x + 10, 670), nm, fill='black', font=_font(16))
-        k = rng.randrange(len(names))
-        rel = os.path.join('slides', f'syn_{i:03d}.png')
-        im.save(os.path.join(root, rel))
-        items.append({'id': f'syn_{i:03d}', 'question': f'In quarterly report {i + 1}, what is the value of the {names[k]} bar?', 'answers': [str(vals[k])], 'image': rel, 'answer_type': 'number', 'deck': 'synthetic'})
-    with open(os.path.join(root, 'pool.jsonl'), 'w') as f:
-        for it in items:
-            f.write(json.dumps(it) + '\n')
-    return items

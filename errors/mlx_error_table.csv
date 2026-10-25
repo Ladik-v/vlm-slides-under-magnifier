@@ -1,61 +1,61 @@
-id,mode,question,gold,answer,boxes,montage,f1,num_5pct,category
-544,D,"Volume, Velocity, Variety, and Veracity are part of what?",Value,The 4 V's of Big Data,"[[528.0, 166.0, 945.0, 552.0]]",errors/mlx_D_544.png,0.0,0.0,
-938,D,For which key element do Commerce Bank and Citibank score most similarly?,PC banking,Branch Hours,"[[62.0, 622.0, 962.0, 962.0]]",errors/mlx_D_938.png,0.0,,
-53,D,How many points are listed to explain that A generic drug is the same as brand name drug?,7,6,"[[222.0, 148.0, 978.0, 786.0]]",errors/mlx_D_53.png,0.0,0.0,
-281,D,What is the average session duration for desktop?,00:04:14,00:03:51,"[[855.0, 386.0, 947.0, 444.0]]",errors/mlx_D_281.png,0.3333,1.0,
-101,D,What is Hilton Sydney's star rating?,3.9,Not visible,"[[12.0, 422.0, 156.0, 478.0]]",errors/mlx_D_101.png,0.0,,
-912,D,Which is the most expensive of Aqualisa's Core Product Offerings?,Aquavalve 609,Premium,"[[672.0, 259.0, 906.0, 328.0]]",errors/mlx_D_912.png,0.0,,
-1018,D,What part of the esophagus is just above the cardioesophageal junction as seen in the figure?,Lower thoracic esophagus,Lower 1/3 (Distal),"[[322.0, 786.0, 582.0, 937.0]]",errors/mlx_D_1018.png,0.2857,0.0,
-870,D,What three types of brick are pictured in the drawing?,"American, ROMAN, ENGLiSH","American Brick, Roman Brick, English Brick","[[238.0, 500.0, 823.0, 875.0]]",errors/mlx_D_870.png,0.6667,,
-1000,D,Salespeople with how many years experience get the most new customers?,2-5,2-5 years,"[[166.0, 388.0, 922.0, 584.0]]",errors/mlx_D_1000.png,0.8,1.0,
-41,D,Which part of appendixes shows the Signs/symptoms of Diarrhoea and crampy pain?,Retro/paraileal,Retro/parailael,"[[57.0, 610.0, 572.0, 708.0]]",errors/mlx_D_41.png,0.5,,
-732,D,Republic Act No. 10641 replaces which previous Act No.?,7721,Republic Act No. 7723,"[[658.0, 572.0, 820.0, 625.0], [122.0, 306.0, 842.0, 760.0], [622.0, 572.0, 958.0, 720.0]]",errors/mlx_D_732.png,0.0,1.0,
-192,D,What are the components of exhaust?,"burned gases, exhaust valve, piston","exhaust valve, piston, burned gases","[[500.0, 600.0, 992.0, 978.0]]",errors/mlx_D_192.png,1.0,,
-448,D,How many subscribers does Mahindra e2o's YouTube channel have?,108,"236,483","[[875.0, 778.0, 945.0, 807.0]]",errors/mlx_D_448.png,0.0,0.0,
-70,D,How can we are social be contacted?,"Email, Twitter, Phone, Website","Sayhello@wearesocial.sg, @wearesocialsg, +65 6423 1051, wearesocial.sg","[[238.0, 452.0, 747.0, 838.0]]",errors/mlx_D_70.png,0.0,0.0,
-601,D,Who did the computations to produce the map of scientific collaborations from 2005 to 2009?,Olivier H. Beauchesne,"Olivier H. Beauchesne @ Science-Metrix, Inc.","[[0.0, 857.0, 356.0, 907.0]]",errors/mlx_D_601.png,0.6667,,
-489,D,"Between 2010 and 2020, Internet penetration in Southeast Asia is expected to increase by how many percentage points?",37,62%,"[[728.0, 632.0, 925.0, 852.0]]",errors/mlx_D_489.png,0.0,0.0,
-874,D,What is wilde greene's phone system?,New Panasonic IP,BRdata Micros,"[[32.0, 784.0, 225.0, 978.0], [482.0, 784.0, 675.0, 978.0]]",errors/mlx_D_874.png,0.0,,
-88,D,Is eBook Penetration higher in Public or Academic libraries?,Academic,Public,"[[298.0, 217.0, 675.0, 273.0]]",errors/mlx_D_88.png,0.0,,
-516,D,A global score greater than what indicates a subject is having poor sleep?,5,1.0,"[[642.0, 487.0, 845.0, 604.0]]",errors/mlx_D_516.png,0.0,0.0,
-353,D,"According to Ryan Calo's tweet, how many years prior to the Jeep hacking fiasco were the car companies warned?",5,FIVE,"[[542.0, 286.0, 888.0, 343.0]]",errors/mlx_D_353.png,0.0,,
-219,D,What are characteristics of the collectors segment?,"Use RSS, Tag Web pages","Read blogs, Watch peer generated video, Listen to podcasts","[[500.0, 328.0, 675.0, 428.0], [328.0, 468.0, 675.0, 842.0], [588.0, 478.0, 825.0, 642.0]]",errors/mlx_D_219.png,0.0,,
-249,D,On which day did the most Facebook fans of Moz see their posts?,THU,WED,"[[31.0, 442.0, 984.0, 678.0]]",errors/mlx_D_249.png,0.0,,
-568,D,Which voltage level in KV has a minimum clearance of 3050 mm?,220,220 KV,"[[156.0, 562.0, 762.0, 932.0]]",errors/mlx_D_568.png,0.6667,1.0,
-317,D,What is the trade name for the substance with the chemical name of polypropylene?,Herculon,Hercylon,[],errors/mlx_D_317.png,0.0,,
-679,D,About how many positions in Europe are affected by BASF's Restructuring of Construction Chemicals?,400,About 400 positions in Europe are affected,"[[349.0, 602.0, 669.0, 658.0]]",errors/mlx_D_679.png,0.25,1.0,
-289,D,What are the two counterparts depicted on the yinyang?,"ENTERTAINMENT, MARKETING",Entertainment and Marketing,"[[178.0, 87.0, 796.0, 892.0]]",errors/mlx_D_289.png,0.8,,
-396,D,What is Karmaloop's coupon code for Black Friday?,BLKLIGHT,CYBERVISION,"[[442.0, 472.0, 967.0, 538.0]]",errors/mlx_D_396.png,0.0,,
-992,D,Was there greater Internet penetration or mobile subscription penetration in Oceania in January 2014?,MOBILE SUBSCRIPTION PENETRATION,Internet penetration,"[[587.0, 378.0, 902.0, 838.0]]",errors/mlx_D_992.png,0.4,,
-163,D,What type of market has high market head and high differentiation?,Focus,Competitive,"[[312.0, 210.0, 709.0, 786.0]]",errors/mlx_D_163.png,0.0,,
-745,D,Are there more steps in classic chemotherapy or CSC-targeted therapy?,CSC-targeted therapy,Classic chemotherapy has more steps,"[[366.0, 253.0, 945.0, 846.0]]",errors/mlx_D_745.png,0.0,,
-544,A,"Volume, Velocity, Variety, and Veracity are part of what?",Value,Big Data 4 V's,[],errors/mlx_A_544.png,0.0,0.0,
-938,A,For which key element do Commerce Bank and Citibank score most similarly?,PC banking,Branch Hours,[],errors/mlx_A_938.png,0.0,,
-870,A,What three types of brick are pictured in the drawing?,"American, ROMAN, ENGLiSH","Honeycomb Brick, Roman Brick, English Brick",[],errors/mlx_A_870.png,0.4444,,
-420,A,"In Thailand, Class A is defined as respondents with over how many THB?","50,001","24,000",[],errors/mlx_A_420.png,0.0,0.0,
-353,A,"According to Ryan Calo's tweet, how many years prior to the Jeep hacking fiasco were the car companies warned?",5,FIVE,[],errors/mlx_A_353.png,0.0,,
-801,A,What three languages does Storm Trident use?,"Java, Clojure, Scala",Java,[],errors/mlx_A_801.png,0.5,,
-1018,A,What part of the esophagus is just above the cardioesophageal junction as seen in the figure?,Lower thoracic esophagus,Lower 1/3 (Distal),[],errors/mlx_A_1018.png,0.2857,0.0,
-289,A,What are the two counterparts depicted on the yinyang?,"ENTERTAINMENT, MARKETING","Marketing, Entertainment",[],errors/mlx_A_289.png,1.0,,
-1000,A,Salespeople with how many years experience get the most new customers?,2-5,5-10 years,[],errors/mlx_A_1000.png,0.4,0.0,
-435,A,What percentage of all iOS App Store downloads were for the iPad?,Nearly 20,20%,[],errors/mlx_A_435.png,0.6667,1.0,
-192,A,What are the components of exhaust?,"burned gases, exhaust valve, piston","exhaust valve, piston, burned gases",[],errors/mlx_A_192.png,1.0,,
-618,A,Were there more farmers in 2001 or 2002?,2001,2002,[],errors/mlx_A_618.png,0.0,1.0,
-249,A,On which day did the most Facebook fans of Moz see their posts?,THU,MON,[],errors/mlx_A_249.png,0.0,,
-53,A,How many points are listed to explain that A generic drug is the same as brand name drug?,7,6,[],errors/mlx_A_53.png,0.0,0.0,
-70,A,How can we are social be contacted?,"Email, Twitter, Phone, Website","sayhello@wearesocial.sg, @wearesocialsg, +65 6423 1051, wearesocial.sg",[],errors/mlx_A_70.png,0.0,0.0,
-101,A,What is Hilton Sydney's star rating?,3.9,4 stars,[],errors/mlx_A_101.png,0.0,1.0,
-791,A,How many people per year are killed by humans and mosquitos combined?,"1,200,000475,000+725,000",825000,[],errors/mlx_A_791.png,0.0,0.0,
-568,A,Which voltage level in KV has a minimum clearance of 3050 mm?,220,220 KV,[],errors/mlx_A_568.png,0.6667,1.0,
-516,A,A global score greater than what indicates a subject is having poor sleep?,5,0.8,[],errors/mlx_A_516.png,0.0,0.0,
-486,A,What percentage of base oil is made up of additives?,15-25,25%,[],errors/mlx_A_486.png,0.6667,0.0,
-912,A,Which is the most expensive of Aqualisa's Core Product Offerings?,Aquavalve 609,Premium,[],errors/mlx_A_912.png,0.0,,
-163,A,What type of market has high market head and high differentiation?,Focus,Niche,[],errors/mlx_A_163.png,0.0,,
-38,A,"In which year may Subnational Debts be relieved more by Government, 2015 or 2016?",2015,2016,[],errors/mlx_A_38.png,0.0,1.0,
-317,A,What is the trade name for the substance with the chemical name of polypropylene?,Herculon,Hercylon,[],errors/mlx_A_317.png,0.0,,
-205,A,What types of infrastructures exist in the Mobile Application Ecosystem?,"Carriers, Cloud, Video","(Carrier, Cloud, Video)",[],errors/mlx_A_205.png,0.6667,,
-732,A,Republic Act No. 10641 replaces which previous Act No.?,7721,7221,[],errors/mlx_A_732.png,0.0,0.0,
-648,A,Whose name is selected in the image showing the Hull Diaries screen?,Ben Borthwick,John Johnston,[],errors/mlx_A_648.png,0.0,,
-815,A,"Which has a higher affinity value, from H to E or from H to G?",from H to G,H to G,[],errors/mlx_A_815.png,0.8571,,
-396,A,What is Karmaloop's coupon code for Black Friday?,BLKLIGHT,BLUeLIGHT,[],errors/mlx_A_396.png,0.0,,
-745,A,Are there more steps in classic chemotherapy or CSC-targeted therapy?,CSC-targeted therapy,4,[],errors/mlx_A_745.png,0.0,0.0,
+id,mode,question,gold,answer,boxes,montage,f1,num_5pct,category,note
+544,D,"Volume, Velocity, Variety, and Veracity are part of what?",Value,The 4 V's of Big Data,"[[528.0, 166.0, 945.0, 552.0]]",errors/mlx_D_544.png,0.0,0.0,reasoning,"right region; gold Value is the centre of the diagram, model named the topic instead"
+938,D,For which key element do Commerce Bank and Citibank score most similarly?,PC banking,Branch Hours,"[[62.0, 622.0, 962.0, 962.0]]",errors/mlx_D_938.png,0.0,,wrong_region,"box covers only the x-axis labels, not the two lines"
+53,D,How many points are listed to explain that A generic drug is the same as brand name drug?,7,6,"[[222.0, 148.0, 978.0, 786.0]]",errors/mlx_D_53.png,0.0,0.0,reasoning,whole diagram in the box; counted 6 of 7 boxes
+281,D,What is the average session duration for desktop?,00:04:14,00:03:51,"[[855.0, 386.0, 947.0, 444.0]]",errors/mlx_D_281.png,0.3333,1.0,wrong_region,"box on the total row (03:51), question asks for the desktop row (04:14)"
+101,D,What is Hilton Sydney's star rating?,3.9,Not visible,"[[12.0, 422.0, 156.0, 478.0]]",errors/mlx_D_101.png,0.0,,wrong_region,box on the hotel name; the 3.9 rating is at the bottom of the card
+912,D,Which is the most expensive of Aqualisa's Core Product Offerings?,Aquavalve 609,Premium,"[[672.0, 259.0, 906.0, 328.0]]",errors/mlx_D_912.png,0.0,,wrong_region,box on the column header only; prices are in the table below
+1018,D,What part of the esophagus is just above the cardioesophageal junction as seen in the figure?,Lower thoracic esophagus,Lower 1/3 (Distal),"[[322.0, 786.0, 582.0, 937.0]]",errors/mlx_D_1018.png,0.2857,0.0,format,same segment named on the other scale (Lower 1/3 Distal vs Lower thoracic esophagus); gold label is outside the crop
+870,D,What three types of brick are pictured in the drawing?,"American, ROMAN, ENGLiSH","American Brick, Roman Brick, English Brick","[[238.0, 500.0, 823.0, 875.0]]",errors/mlx_D_870.png,0.6667,,format,"right three types, extra word Brick"
+1000,D,Salespeople with how many years experience get the most new customers?,2-5,2-5 years,"[[166.0, 388.0, 922.0, 584.0]]",errors/mlx_D_1000.png,0.8,1.0,format,"right row, extra word years"
+41,D,Which part of appendixes shows the Signs/symptoms of Diarrhoea and crampy pain?,Retro/paraileal,Retro/parailael,"[[57.0, 610.0, 572.0, 708.0]]",errors/mlx_D_41.png,0.5,,misread,"right cell, answer misspelled (parailael)"
+732,D,Republic Act No. 10641 replaces which previous Act No.?,7721,Republic Act No. 7723,"[[658.0, 572.0, 820.0, 625.0], [122.0, 306.0, 842.0, 760.0], [622.0, 572.0, 958.0, 720.0]]",errors/mlx_D_732.png,0.0,1.0,misread,"third box shows 7721 clearly, model answered 7723"
+192,D,What are the components of exhaust?,"burned gases, exhaust valve, piston","exhaust valve, piston, burned gases","[[500.0, 600.0, 992.0, 978.0]]",errors/mlx_D_192.png,1.0,,format,"right items, different order"
+448,D,How many subscribers does Mahindra e2o's YouTube channel have?,108,"236,483","[[875.0, 778.0, 945.0, 807.0]]",errors/mlx_D_448.png,0.0,0.0,wrong_region,"box on video views (236,483), subscribers (108) are next to it"
+70,D,How can we are social be contacted?,"Email, Twitter, Phone, Website","Sayhello@wearesocial.sg, @wearesocialsg, +65 6423 1051, wearesocial.sg","[[238.0, 452.0, 747.0, 838.0]]",errors/mlx_D_70.png,0.0,0.0,format,"gives the actual handles, gold lists the categories"
+601,D,Who did the computations to produce the map of scientific collaborations from 2005 to 2009?,Olivier H. Beauchesne,"Olivier H. Beauchesne @ Science-Metrix, Inc.","[[0.0, 857.0, 356.0, 907.0]]",errors/mlx_D_601.png,0.6667,,format,right name plus the company
+489,D,"Between 2010 and 2020, Internet penetration in Southeast Asia is expected to increase by how many percentage points?",37,62%,"[[728.0, 632.0, 925.0, 852.0]]",errors/mlx_D_489.png,0.0,0.0,wrong_region,"box covers only 62%, the 25% of 2010 is outside; needed 62 minus 25"
+874,D,What is wilde greene's phone system?,New Panasonic IP,BRdata Micros,"[[32.0, 784.0, 225.0, 978.0], [482.0, 784.0, 675.0, 978.0]]",errors/mlx_D_874.png,0.0,,wrong_region,"boxes on web presence and POS columns, not the telephone column"
+88,D,Is eBook Penetration higher in Public or Academic libraries?,Academic,Public,"[[298.0, 217.0, 675.0, 273.0]]",errors/mlx_D_88.png,0.0,,wrong_region,"box on the legend only, the bars are outside"
+516,D,A global score greater than what indicates a subject is having poor sleep?,5,1.0,"[[642.0, 487.0, 845.0, 604.0]]",errors/mlx_D_516.png,0.0,0.0,bad_gold,no global score or threshold of 5 is visible on this slide; evidence page may be mismatched
+353,D,"According to Ryan Calo's tweet, how many years prior to the Jeep hacking fiasco were the car companies warned?",5,FIVE,"[[542.0, 286.0, 888.0, 343.0]]",errors/mlx_D_353.png,0.0,,format,FIVE vs 5
+219,D,What are characteristics of the collectors segment?,"Use RSS, Tag Web pages","Read blogs, Watch peer generated video, Listen to podcasts","[[500.0, 328.0, 675.0, 428.0], [328.0, 468.0, 675.0, 842.0], [588.0, 478.0, 825.0, 642.0]]",errors/mlx_D_219.png,0.0,,wrong_region,"boxes on Critics, Joiners and Spectators rows; the Collectors row bullets are not in a crop"
+249,D,On which day did the most Facebook fans of Moz see their posts?,THU,WED,"[[31.0, 442.0, 984.0, 678.0]]",errors/mlx_D_249.png,0.0,,reasoning,crop is legible; 110.1K (WED) vs 110.4K (THU) compared wrongly
+568,D,Which voltage level in KV has a minimum clearance of 3050 mm?,220,220 KV,"[[156.0, 562.0, 762.0, 932.0]]",errors/mlx_D_568.png,0.6667,1.0,format,extra unit KV
+317,D,What is the trade name for the substance with the chemical name of polypropylene?,Herculon,Hercylon,[],errors/mlx_D_317.png,0.0,,no_zoom,no zoom requested; one-letter misread of a small word (Hercylon)
+679,D,About how many positions in Europe are affected by BASF's Restructuring of Construction Chemicals?,400,About 400 positions in Europe are affected,"[[349.0, 602.0, 669.0, 658.0]]",errors/mlx_D_679.png,0.25,1.0,format,right number inside a sentence
+289,D,What are the two counterparts depicted on the yinyang?,"ENTERTAINMENT, MARKETING",Entertainment and Marketing,"[[178.0, 87.0, 796.0, 892.0]]",errors/mlx_D_289.png,0.8,,format,right words with and
+396,D,What is Karmaloop's coupon code for Black Friday?,BLKLIGHT,CYBERVISION,"[[442.0, 472.0, 967.0, 538.0]]",errors/mlx_D_396.png,0.0,,wrong_region,box on the Cyber Monday tweet; the Black Friday code is in the third tweet
+992,D,Was there greater Internet penetration or mobile subscription penetration in Oceania in January 2014?,MOBILE SUBSCRIPTION PENETRATION,Internet penetration,"[[587.0, 378.0, 902.0, 838.0]]",errors/mlx_D_992.png,0.4,,reasoning,"crop shows 63% and 94% clearly, comparison answered wrongly"
+163,D,What type of market has high market head and high differentiation?,Focus,Competitive,"[[312.0, 210.0, 709.0, 786.0]]",errors/mlx_D_163.png,0.0,,reasoning,"matrix fully visible; top-right quadrant is Focus, model picked top-left"
+745,D,Are there more steps in classic chemotherapy or CSC-targeted therapy?,CSC-targeted therapy,Classic chemotherapy has more steps,"[[366.0, 253.0, 945.0, 846.0]]",errors/mlx_D_745.png,0.0,,reasoning,diagram fully visible; needs counting steps in two branches
+544,A,"Volume, Velocity, Variety, and Veracity are part of what?",Value,Big Data 4 V's,[],errors/mlx_A_544.png,0.0,0.0,reasoning,"reads the diagram as a topic, misses that the arrows lead to Value"
+938,A,For which key element do Commerce Bank and Citibank score most similarly?,PC banking,Branch Hours,[],errors/mlx_A_938.png,0.0,,reasoning,needs comparing two lines across the axis
+870,A,What three types of brick are pictured in the drawing?,"American, ROMAN, ENGLiSH","Honeycomb Brick, Roman Brick, English Brick",[],errors/mlx_A_870.png,0.4444,,no_zoom,"small labels, invented Honeycomb Brick"
+420,A,"In Thailand, Class A is defined as respondents with over how many THB?","50,001","24,000",[],errors/mlx_A_420.png,0.0,0.0,no_zoom,"tiny income table, picked the Class C value"
+353,A,"According to Ryan Calo's tweet, how many years prior to the Jeep hacking fiasco were the car companies warned?",5,FIVE,[],errors/mlx_A_353.png,0.0,,format,FIVE vs 5
+801,A,What three languages does Storm Trident use?,"Java, Clojure, Scala",Java,[],errors/mlx_A_801.png,0.5,,misread,gave only the first item of the list
+1018,A,What part of the esophagus is just above the cardioesophageal junction as seen in the figure?,Lower thoracic esophagus,Lower 1/3 (Distal),[],errors/mlx_A_1018.png,0.2857,0.0,format,same segment named on the other scale
+289,A,What are the two counterparts depicted on the yinyang?,"ENTERTAINMENT, MARKETING","Marketing, Entertainment",[],errors/mlx_A_289.png,1.0,,format,"right words, different order"
+1000,A,Salespeople with how many years experience get the most new customers?,2-5,5-10 years,[],errors/mlx_A_1000.png,0.4,0.0,no_zoom,read the wrong row of a small table
+435,A,What percentage of all iOS App Store downloads were for the iPad?,Nearly 20,20%,[],errors/mlx_A_435.png,0.6667,1.0,format,20% vs Nearly 20
+192,A,What are the components of exhaust?,"burned gases, exhaust valve, piston","exhaust valve, piston, burned gases",[],errors/mlx_A_192.png,1.0,,format,"right items, different order"
+618,A,Were there more farmers in 2001 or 2002?,2001,2002,[],errors/mlx_A_618.png,0.0,1.0,no_zoom,tiny data labels on a line chart; D with zoom answers correctly
+249,A,On which day did the most Facebook fans of Moz see their posts?,THU,MON,[],errors/mlx_A_249.png,0.0,,no_zoom,tiny value labels on the bars
+53,A,How many points are listed to explain that A generic drug is the same as brand name drug?,7,6,[],errors/mlx_A_53.png,0.0,0.0,reasoning,counted 6 of 7 boxes
+70,A,How can we are social be contacted?,"Email, Twitter, Phone, Website","sayhello@wearesocial.sg, @wearesocialsg, +65 6423 1051, wearesocial.sg",[],errors/mlx_A_70.png,0.0,0.0,format,"gives the actual handles, gold lists the categories"
+101,A,What is Hilton Sydney's star rating?,3.9,4 stars,[],errors/mlx_A_101.png,0.0,1.0,no_zoom,rating text at the bottom of the card is tiny
+791,A,How many people per year are killed by humans and mosquitos combined?,"1,200,000475,000+725,000",825000,[],errors/mlx_A_791.png,0.0,0.0,bad_gold,"gold is a garbled string (1,200,000475,000+725,000); model sum is also wrong"
+568,A,Which voltage level in KV has a minimum clearance of 3050 mm?,220,220 KV,[],errors/mlx_A_568.png,0.6667,1.0,format,extra unit KV
+516,A,A global score greater than what indicates a subject is having poor sleep?,5,0.8,[],errors/mlx_A_516.png,0.0,0.0,bad_gold,no global score visible on this slide
+486,A,What percentage of base oil is made up of additives?,15-25,25%,[],errors/mlx_A_486.png,0.6667,0.0,no_zoom,answered 25% instead of 15-25%; D with zoom answers correctly
+912,A,Which is the most expensive of Aqualisa's Core Product Offerings?,Aquavalve 609,Premium,[],errors/mlx_A_912.png,0.0,,no_zoom,tiny price table
+163,A,What type of market has high market head and high differentiation?,Focus,Niche,[],errors/mlx_A_163.png,0.0,,reasoning,"picked Niche, wrong quadrant"
+38,A,"In which year may Subnational Debts be relieved more by Government, 2015 or 2016?",2015,2016,[],errors/mlx_A_38.png,0.0,1.0,no_zoom,tiny table; D with zoom answers correctly
+317,A,What is the trade name for the substance with the chemical name of polypropylene?,Herculon,Hercylon,[],errors/mlx_A_317.png,0.0,,misread,one-letter misread (Hercylon)
+205,A,What types of infrastructures exist in the Mobile Application Ecosystem?,"Carriers, Cloud, Video","(Carrier, Cloud, Video)",[],errors/mlx_A_205.png,0.6667,,no_zoom,read Carrier instead of Carriers; D with zoom answers correctly
+732,A,Republic Act No. 10641 replaces which previous Act No.?,7721,7221,[],errors/mlx_A_732.png,0.0,0.0,no_zoom,"tiny rotated text, 7221 instead of 7721"
+648,A,Whose name is selected in the image showing the Hull Diaries screen?,Ben Borthwick,John Johnston,[],errors/mlx_A_648.png,0.0,,no_zoom,small highlighted name; D with zoom answers correctly
+815,A,"Which has a higher affinity value, from H to E or from H to G?",from H to G,H to G,[],errors/mlx_A_815.png,0.8571,,format,H to G vs from H to G
+396,A,What is Karmaloop's coupon code for Black Friday?,BLKLIGHT,BLUeLIGHT,[],errors/mlx_A_396.png,0.0,,misread,"right tweet, code read as BLUeLIGHT"
+745,A,Are there more steps in classic chemotherapy or CSC-targeted therapy?,CSC-targeted therapy,4,[],errors/mlx_A_745.png,0.0,0.0,reasoning,answered 4 instead of a branch name

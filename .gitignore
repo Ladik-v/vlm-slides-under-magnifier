@@ -5,3 +5,7 @@ __pycache__/
 data/slides/
 own_slides/*
 !own_slides/questions.csv
+
+!own_slides/questions_dense.csv
+_backup_mock/
+main_backup_md.ipynb

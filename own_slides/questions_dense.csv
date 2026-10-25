@@ -1,0 +1,21 @@
+id,image,question,answer,detail_type
+dense_01,d_l3_p29.png,What attention share of sequence mixers is listed for Nemotron 3 Nano?,6 of 29;6 of 29 (≈ 21%);6 of 29 (21%),small_text
+dense_02,d_l3_p29.png,Which model in the table uses KDA as its linear unit?,Kimi Linear (Moonshot);Kimi Linear,small_text
+dense_03,d_l3_p29.png,What date is listed for Qwen3.5-397B-A17B?,Feb 2026,small_text
+dense_04,d_l2_p38.png,What licence is listed for Kimi K2 / K2 Thinking?,Modified MIT,small_text
+dense_05,d_l2_p38.png,How many total parameters does DeepSeek-V3 / R1 / V3.1 have?,671B;671B / 37B,small_text
+dense_06,d_l2_p38.png,What licence is listed for Gemma 3?,Gemma terms,small_text
+dense_07,d_l2_p33.png,What vocabulary size is listed for Llama 2 (2023)?,32k,small_text
+dense_08,d_l2_p33.png,What model size is listed for Llama 2 (2023)?,7B – 70B dense;7B-70B dense,small_text
+dense_09,d_l3_p16.png,"In which year was RetNet introduced, according to the table?",2023,small_text
+dense_10,d_l3_p16.png,"Where is Gated DeltaNet used, according to the table?","Qwen3-Next, Qwen3.5",small_text
+dense_11,d_vw_p83.png,What is the label of the vertical axis of the top chart?,Average Task Progress (%);Average Task Progress,axis_label
+dense_12,d_vw_p83.png,"What value is shown for DreamZero (Scratch) on task 2, Remove Hat from Mannequin?",85.7,chart_value
+dense_13,d_vw_p83.png,"What value is shown for DreamZero (Scratch) on task 9, Fold Map?",8.2,chart_value
+dense_14,d_vw_p82.png,What value is shown for DreamZero (Scratch) on PnP Easy?,93.8,chart_value
+dense_15,d_vw_p82.png,What is the label of the vertical axis?,Success Rate / Task Progress (%);Success Rate / Task Progress,axis_label
+dense_16,d_vw_p58.png,What FVD does Vid2World-NAR get in the Robot Manipulation: RT-1 block?,18.7,small_text
+dense_17,d_vw_p58.png,What FVD does DIAMOND-HQ get in the 3D Game Simulation: CS:GO block?,368.5,small_text
+dense_18,d_vw_p58.png,What FVD does Vid2World get in the Open-World Navigation: RECON block?,59.4,small_text
+dense_19,d_l5_p04.png,How much KV cache does Llama-3.1-70B need at 1M tokens?,320 GB,small_text
+dense_20,d_l5_p04.png,How much KV cache does Qwen2.5-0.5B need at 128k tokens?,1.5 GB,small_text

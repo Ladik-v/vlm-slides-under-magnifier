@@ -1,0 +1,17 @@
+# Expected results of the demo examples
+
+Recorded with Qwen3-VL-4B-Instruct 4-bit via mlx-vlm, greedy decoding, on the 16 GB Apple Silicon Mac of the authors. Mode A sees the slide at 256 visual tokens, B at 1500, C is 256 plus four tiles, D is the zoom agent (256-token overview, up to 3 zooms). The text of the answers can differ in single characters on another machine or backend; the boxes should be close.
+
+| id | slide | question | gold | A | B | C | D | D box (0..1000) | D tokens | D seconds | note |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| dense_12 | d_vw_p83.png | What value is shown for DreamZero (Scratch) on task 2, Remove Hat from Mannequin? | 85.7 | 28.6 (wrong) | 85.7 (ok) | 85.7 (ok) | 85.7 (ok) | [280, 187, 380, 322] | 1983 | 12.77 | Zoom helps: A misreads the bar value, D boxes the bar and reads it. |
+| dense_11 | d_vw_p83.png | What is the label of the vertical axis of the top chart? | Average Task Progress (%) | Average Task Success Rate (%) (wrong) | Average Task Progress (%) (ok) | Average Task Progress (%) (ok) | Average Task Progress (%) (ok) | [106, 202, 145, 432] | 1827 | 11.35 | Zoom helps: A invents a label, D boxes the rotated axis title and reads it. |
+| dense_07 | d_l2_p33.png | What vocabulary size is listed for Llama 2 (2023)? | 32k | 3K (wrong) | 32k (ok) | 32k (ok) | 32k (ok) | [57, 604, 942, 642] | 950 | 5.73 | Zoom helps: A reads 3K, D boxes the table row and reads 32k. |
+| dense_08 | d_l2_p33.png | What model size is listed for Llama 2 (2023)? | 7B – 70B dense | 7B - 70B dense (ok) | 7B–70B dense (ok) | 7B – 70B dense (ok) | 1–32B dense for on-device use; 100B–1T MoE with 3–37B active per token (wrong) | [572, 698, 938, 738] | 1101 | 7.25 | Zoom hurts: D boxes a different row and answers from it. |
+| dense_17 | d_vw_p58.png | What FVD does DIAMOND-HQ get in the 3D Game Simulation: CS:GO block? | 368.5 | 17.5 (wrong) | 368.5 (ok) | 368.5 (ok) | 368.5 (ok) | [202, 677, 273, 727] | 1649 | 10.18 | Right answer, wrong region: the box covers the row label, not the number. |
+| own_02 | l3_p04.png | What is the label of the horizontal axis of the chart? | Context length (tokens) | Content length (tokens) (wrong) | Context length (tokens) (ok) | Context length (tokens) (ok) | Context length (tokens) (ok) | [520, 625, 925, 666] | 1066 | 6.79 | Zoom helps: A misreads one word of the axis title. |
+| own_07 | l3_p04.png | What constant state size does the legend give for the pure linear / SSM line? | 0.6 GB | 1.0 GB (wrong) | ~0.6 GB (ok) | ~0.6 GB (ok) | 0.6 GB (ok) | [538, 296, 738, 324] | 1195 | 7.52 | Zoom helps: A answers 1.0 GB, D boxes the legend and reads 0.6 GB. |
+| own_01 | vw_p80.png | What is the label of the vertical axis of the chart? | FVD | PVD (·) (wrong) | FVD (→) (ok) | FVD (↓) (ok) | FVD (↓) (ok) | [32, 166, 125, 500] | 1984 | 12.55 | Zoom helps: the unit arrow in the axis label is read correctly in the crop. |
+| own_09 | l5_p10.png | How many orange bars are in the chart? | 12 | 32 (wrong) | 12 (ok) | 30 (wrong) | 12 (ok) | [102, 232, 602, 598] | 1537 | 10.05 | Zoom helps: A and C miscount, D boxes the chart and counts 12. |
+
+Exact match on these 9 questions: A 1/9, B 9/9, C 8/9, D 8/9. The examples were picked after looking at the results, mostly questions where A fails and D answers, plus two where D fails or looks in the wrong place, so these counts are not an estimate of accuracy. The full results (120 test, 20 own, 20 dense questions) are in the notebook and in `results/`.

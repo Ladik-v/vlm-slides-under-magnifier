@@ -1,0 +1,5 @@
+1. box=[0.0, 666.0, 244.0, 966.0] ok
+   raw: {"action": "zoom", "box": [0, 666, 244, 966]}  ```json {"action": "zoom", "box": [0, 666, 244, 966] }
+answer: '4'
+gold: ['5']
+tokens: 2400, seconds: 18.45

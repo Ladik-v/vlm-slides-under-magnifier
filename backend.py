@@ -1,6 +1,5 @@
 import os
 import tempfile
-from tools import visual_tokens
 
 
 class Backend:
@@ -48,18 +47,6 @@ class TransformersBackend(Backend):
         gen = out[:, inputs['input_ids'].shape[1]:]
         self.last_tokens = int(out.shape[1])
         return self.processor.batch_decode(gen, skip_special_tokens=True)[0]
-
-
-class MockBackend(Backend):
-    def __init__(self, policy):
-        self.policy = policy
-        self.calls = []
-
-    def generate(self, messages, images, max_tokens=256):
-        text = self.policy(messages, images)
-        self.calls.append({'n_images': len(images), 'reply': text})
-        self.last_tokens = sum(visual_tokens(im) for im in images) + sum(len(p.get('text', '')) // 4 for m in messages for p in m['content']) + len(text) // 4
-        return text
 
 
 def make_backend(kind='mlx', **kw):

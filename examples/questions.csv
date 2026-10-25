@@ -1,0 +1,10 @@
+id,image,question,answer,detail_type
+dense_12,slides/d_vw_p83.png,"What value is shown for DreamZero (Scratch) on task 2, Remove Hat from Mannequin?",85.7,chart_value
+dense_11,slides/d_vw_p83.png,What is the label of the vertical axis of the top chart?,Average Task Progress (%);Average Task Progress,axis_label
+dense_07,slides/d_l2_p33.png,What vocabulary size is listed for Llama 2 (2023)?,32k,small_text
+dense_08,slides/d_l2_p33.png,What model size is listed for Llama 2 (2023)?,7B – 70B dense;7B-70B dense,small_text
+dense_17,slides/d_vw_p58.png,What FVD does DIAMOND-HQ get in the 3D Game Simulation: CS:GO block?,368.5,small_text
+own_02,slides/l3_p04.png,What is the label of the horizontal axis of the chart?,Context length (tokens);Context length,axis_label
+own_07,slides/l3_p04.png,What constant state size does the legend give for the pure linear / SSM line?,0.6 GB;0.6,chart_value
+own_01,slides/vw_p80.png,What is the label of the vertical axis of the chart?,FVD;FVD (↓),axis_label
+own_09,slides/l5_p10.png,How many orange bars are in the chart?,12,chart_value

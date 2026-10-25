@@ -1,0 +1,5 @@
+1. box=[67.0, 202.0, 120.0, 604.0] ok
+   raw: {"action": "zoom", "box": [67, 202, 120, 604]}
+answer: 'FLOPs per generated token, one layer'
+gold: ['FLOPs per generated token, one layer', 'FLOPs per generated token']
+tokens: 1548, seconds: 10.34

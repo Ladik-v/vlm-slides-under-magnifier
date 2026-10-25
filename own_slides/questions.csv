@@ -1,21 +1,21 @@
 id,image,question,answer,detail_type
-own_01,,,,axis_label
-own_02,,,,axis_label
-own_03,,,,axis_label
-own_04,,,,axis_label
-own_05,,,,axis_label
-own_06,,,,chart_value
-own_07,,,,chart_value
-own_08,,,,chart_value
-own_09,,,,chart_value
-own_10,,,,chart_value
-own_11,,,,small_text
-own_12,,,,small_text
-own_13,,,,small_text
-own_14,,,,small_text
-own_15,,,,small_text
-own_16,,,,block_relation
-own_17,,,,block_relation
-own_18,,,,block_relation
-own_19,,,,block_relation
-own_20,,,,block_relation
+own_01,vw_p80.png,What is the label of the vertical axis of the chart?,FVD;FVD (↓),axis_label
+own_02,l3_p04.png,What is the label of the horizontal axis of the chart?,Context length (tokens);Context length,axis_label
+own_03,l5_p10.png,What is the label of the vertical axis of the bar chart?,"wavelength, tokens;wavelength",axis_label
+own_04,l1_p20.png,What is the label of the horizontal axis of the plot?,"Training compute (PF-days, log scale);Training compute (PF-days);Training compute",axis_label
+own_05,l3_p05.png,What is the label of the vertical axis of the plot?,"FLOPs per generated token, one layer;FLOPs per generated token",axis_label
+own_06,vw_p80.png,"At 4 sampling steps, which method has the lower FVD?",Shortcut Forcing,chart_value
+own_07,l3_p04.png,What constant state size does the legend give for the pure linear / SSM line?,0.6 GB;0.6,chart_value
+own_08,l5_p10.png,"What trained context length, in tokens, is written next to the dashed line?","8,192;8192",chart_value
+own_09,l5_p10.png,How many orange bars are in the chart?,12,chart_value
+own_10,l1_p20.png,Which y-axis tick label lies between 3.0 and 2.0?,2.5,chart_value
+own_11,vw_p80.png,"According to the figure caption, how many times faster are generations with shortcut forcing?",16;16x,small_text
+own_12,l3_p04.png,How much cache does 128k tokens need for one sequence?,40 GiB;40,small_text
+own_13,l1_p20.png,How many tokens per parameter does the Chinchilla bullet recommend?,20;about 20,small_text
+own_14,l4_p14.png,How many image-caption pairs are used to pre-train the adapter?,558 K;558K;558000,small_text
+own_15,vw_p66.png,What average score does the Full World Model get in Table 1?,906 ± 21;906,small_text
+own_16,vw_p28.png,Which block sends the vector h to the controller C?,MDN-RNN (M);MDN-RNN;M,block_relation
+own_17,vw_p28.png,What is the input of the VAE (V) in the diagram?,observation,block_relation
+own_18,l4_p14.png,"In the LLaVA figure, which block turns the vision encoder output Z_v into H_v?",Projection W;Projection,block_relation
+own_19,l2_p15.png,"In the decoder, which block comes right before the Feed Forward block?",Encoder-Decoder Attention,block_relation
+own_20,l2_p15.png,"In the decoder, which block receives the input at the bottom?",Self-Attention,block_relation

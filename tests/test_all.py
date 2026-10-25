@@ -5,6 +5,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, os.path.dirname(__file__))
 
 from PIL import Image
 
@@ -12,12 +13,12 @@ import agent
 import data
 import metrics
 import tools
-from backend import MockBackend
+from helpers import ScriptedBackend, make_slides
 
 
 def scripted(replies):
     it = iter(replies)
-    return MockBackend(lambda m, i: next(it))
+    return ScriptedBackend(lambda m, i: next(it))
 
 
 def img(w=1280, h=720):
@@ -174,7 +175,7 @@ class TestAgent(unittest.TestCase):
             seen.append(list(messages))
             return next(replies)
 
-        rec = agent.run(img(), 'q?', 'D', backend=MockBackend(policy))
+        rec = agent.run(img(), 'q?', 'D', backend=ScriptedBackend(policy))
         self.assertEqual(rec['answer'], 'real')
         assistant = [m['content'][0]['text'] for m in seen[1] if m['role'] == 'assistant']
         self.assertEqual(len(assistant), 1)
@@ -191,12 +192,12 @@ class TestAgent(unittest.TestCase):
 class TestResume(unittest.TestCase):
     def test_run_dataset_resumes(self):
         with tempfile.TemporaryDirectory() as tmp:
-            items = data.make_synthetic(tmp, n=4)
+            items = make_slides(tmp, n=4)
             out = os.path.join(tmp, 'r.jsonl')
-            b1 = MockBackend(lambda m, i: '1')
+            b1 = ScriptedBackend(lambda m, i: '1')
             agent.run_dataset(items[:2], 'A', out, backend=b1, root=tmp)
             self.assertEqual(len(b1.calls), 2)
-            b2 = MockBackend(lambda m, i: '1')
+            b2 = ScriptedBackend(lambda m, i: '1')
             recs = agent.run_dataset(items, 'A', out, backend=b2, root=tmp)
             self.assertEqual(len(b2.calls), 2)
             self.assertEqual(len(recs), 4)
@@ -208,7 +209,7 @@ class TestResume(unittest.TestCase):
 class TestData(unittest.TestCase):
     def test_splits_frozen(self):
         with tempfile.TemporaryDirectory() as tmp:
-            items = data.make_synthetic(tmp, n=20)
+            items = make_slides(tmp, n=20)
             p = os.path.join(tmp, 'splits.json')
             s1 = data.make_splits(items, p, n_dev=5, n_test=10)
             s2 = data.make_splits(items[::-1], p, n_dev=7, n_test=3)
@@ -219,7 +220,7 @@ class TestData(unittest.TestCase):
 
     def test_size_stats_and_own_csv(self):
         with tempfile.TemporaryDirectory() as tmp:
-            items = data.make_synthetic(tmp, n=3)
+            items = make_slides(tmp, n=3)
             st = data.size_stats(items, tmp)
             self.assertEqual(st['median'], 1280)
             self.assertFalse(st['zoom_has_headroom'])

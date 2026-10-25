@@ -1,0 +1,5 @@
+1. box=[280.0, 187.0, 380.0, 322.0] ok
+   raw: {"action": "zoom", "box": [280, 187, 380, 322]}  {"action": "answer", "answer": "42.0"}
+answer: '85.7'
+gold: ['85.7']
+tokens: 1983, seconds: 12.77

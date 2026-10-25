@@ -1,8 +1,10 @@
 # Slides under a magnifying glass: a VLM with crop and zoom
 
-Course project. A vision-language model, Qwen3-VL-4B-Instruct, answers questions about presentation slides that need a small detail: a label, a number on a chart, a link between blocks. We give it a crop/zoom tool, let it pick regions, and measure whether zooming helps compared with looking at the whole slide.
+Modern Methods and Algorithms of Generative Artificial Intelligence course project. A vision-language model, Qwen3-VL-4B-Instruct, answers questions about presentation slides that need a small detail: a label, a number on a chart, a link between blocks. We give it a crop/zoom tool, let it pick regions, and measure whether zooming helps compared with looking at the whole slide.
 
-Main result on 120 SlideVQA test questions: zoom did not help. A single view of the slide at its native resolution (768 visual tokens) scores 0.79 exact match at about 800 tokens per question. The zoom agent with the same first look scores 0.71 at about 2660 tokens. SlideVQA slides are only 1024 px on the long side, so a downscaled overview loses little and zoom has little to recover. The own-slides experiment (section 6 of the notebook) is meant to test slides with a higher resolution.
+Main result: on 120 SlideVQA test questions zoom did not help. A single view of the slide at its native resolution (768 visual tokens) scores 0.79 exact match (EM) at about 800 tokens per question. The zoom agent with the same first look scores 0.71 at about 2660 tokens. SlideVQA slides are only 1024 px on the long side, so a downscaled overview loses little and zoom has little to recover.
+
+On our own 2560 px slides (40 questions, many with small print) the picture changes: the zoom agent reaches 0.85 against 0.62 for the same overview without zoom. A bigger single view without zoom (768 tokens, 0.90) or the 1500-token view (0.93) is still as good, within noise. Zoom helps when the first look is too small to read, and it adds wrong-box errors, so the net gain is zero once the first look is large enough.
 
 ## Results (test, n = 120, greedy decoding, Qwen3-VL-4B-Instruct 4-bit via mlx-vlm)
 
@@ -18,6 +20,57 @@ Main result on 120 SlideVQA test questions: zoom did not help. A single view of 
 | F | A with a JSON answer prompt (format control) | 0.66 (0.57 to 0.74) | 0.72 | 0% | 336 | 2.1 |
 
 With 120 questions an accuracy near 0.7 has an interval of about plus or minus 9 points, so small gaps are not effects. The notebook (section 5) gives paired bootstrap intervals and exact McNemar tests. The clear results are A (256) below A768 and B, and D768 below A768 (12 questions against 2, p = 0.013). B against A768 is inside the noise (p = 0.375).
+
+## Results on own and dense slides (2560 px, exact match)
+
+| Mode | Own, 20 questions | Dense, 20 questions | All 40 | Tokens / question (all 40) |
+|---|---|---|---|---|
+| A, 256 tokens | 0.70 | 0.55 | 0.62 | about 310 |
+| A768, 768 tokens | 1.00 | 0.80 | 0.90 | about 830 |
+| B, 1500 tokens | 0.95 | 0.90 | 0.93 | about 1570 |
+| C, overview plus 4 tiles | 0.75 | 0.95 | 0.85 | about 3900 |
+| D, zoom agent | 0.90 | 0.80 | 0.85 | about 1500 to 1800 |
+
+The own questions cover four detail types, 5 each (axis label, value on a chart, small text, relation between blocks). The dense set has 20 questions on 8 slides with tables and bar charts in small print. With 20 to 40 questions an interval is about plus or minus 15 to 20 points. D beats A by 22.5 points on all 40 (13 questions against 4, p = 0.049) and A768 beats A by 27.5 points (13 against 2, p = 0.007). D against A768 and B is inside the noise. Fixed tiles (C) are best on the dense slides (0.95) and cost about 3900 tokens.
+
+## Error analysis (SlideVQA test)
+
+Each of A and D makes 41 errors on the 120 test questions. We sorted 30 sampled errors per mode:
+
+| Category | A | D |
+|---|---|---|
+| `no_zoom` (text too small, no zoom requested) | 12 | 1 |
+| `wrong_region` (box misses or cuts the evidence) | 0 | 10 |
+| `format` (right meaning, EM is 0) | 8 | 10 |
+| `reasoning` | 5 | 6 |
+| `misread` (right region, wrong text) | 3 | 2 |
+| `bad_gold` | 2 | 1 |
+
+Zoom removes most of the `no_zoom` errors and adds wrong-box errors, which is why the totals are equal. About a third of the errors of D are format mismatches, so EM understates both modes. The categories were assigned in one pass by an AI assistant and checked by one author, and the shares come from samples of 30. The tables are in `errors/`.
+
+## Demo examples
+
+Each picture shows the slide with the numbered box that mode D chose (left) and the crop the model received (right). More cases with exact numbers are in `examples/expected_results.md`.
+
+**Zoom works.** Question on `dense_12`: "What value is shown for DreamZero (Scratch) on task 2, Remove Hat from Mannequin?" Mode A answers 28.6, D boxes the dark bar of task 2, reads 85.7 in the crop and is right.
+
+![dense_12: the box on the tallest bar and the crop with the value 85.7](demo_outputs/replay_dense_12.png)
+
+**Zoom reads a small diagram.** SlideVQA test question 32: "What is the abbreviation for Sales Qualified Leads?" A answers SAL, D boxes the tiny diagram block and reads SQL.
+
+![SlideVQA 32: the box on the small funnel diagram and the enlarged block Sales Qualified Leads (SQL)](demo_outputs/replay_32.png)
+
+**Axis label.** Own question 05: "What is the label of the vertical axis of the plot?" A invents "Decoding cost per token (in $)", D boxes the rotated title and reads "FLOPs per generated token, one layer".
+
+![own_05: the box on the vertical axis title and its crop](demo_outputs/replay_own_05.png)
+
+**Right region, wrong bar.** Dense question 14: "What value is shown for DreamZero (Scratch) on PnP Easy?" Gold 93.8. D boxes the right group and the crop shows 93.8, but the model answers 2.1, the value of another bar. The zoom gave it the detail and it used the wrong bar.
+
+![dense_14: the box on the PnP Easy group and the crop with the bars 2.1, 17.6, 52.1 and 93.8](demo_outputs/replay_dense_14.png)
+
+**The box cuts the evidence.** SlideVQA test question 877: "How many players were in the pre-1983 market?" Gold 5. A answers 5, D boxes the list but the box ends in the middle of the last name, and D answers 4.
+
+![SlideVQA 877: the box on the Players list stops before the last line](demo_outputs/replay_877.png)
 
 ## Repository layout
 
@@ -101,28 +154,15 @@ The slides are figures from course material and papers, included in small number
 - Image budget: a visual token covers about 32x32 px. Low budget 256 tokens, high budget 1500.
 - Metrics: exact match and token F1 after normalisation (lowercase, thousands commas removed, punctuation dropped, articles dropped). An empty or invalid answer scores 0 and stays in the denominator.
 
-## What is left to do
-
-1. Own and dense questions. The 20 own questions and the 20 dense-slide questions are written (`own_slides/questions.csv`, `own_slides/questions_dense.csv`). Run sections 6.1 to 6.3 of the notebook: A at 768 tokens on the own questions, modes A, A768, B, C, D on the dense ones, then the comparison tables. Slide images are not committed (see `.gitignore`); pass the `own_slides/` folder to the other team member separately.
-2. Error analysis. Fill the `category` column in `errors/mlx_error_table.csv` (60 errors of modes D and A), `errors/mlx_discordant.csv` (16 questions where A and D disagree) and `errors/mlx_discordant_FD.csv` (14 questions where F and D disagree). The notebook never overwrites these files. Categories:
-   - `no_zoom`: the model did not request a zoom although the needed text was small, and answered wrongly
-   - `wrong_region`: the box is not on the evidence
-   - `misread`: the region is right but the text was read wrongly
-   - `format`: the meaning is right but exact match is 0 (count this share separately, it is a metric error)
-   - `reasoning`: the question needs a calculation, a comparison or several slides
-   - `bad_gold`: the gold label itself looks wrong (optional extra category)
-
-   Agree on the rules together on about 10 shared rows first, then split the rest between two people.
-3. Demo check. Run section 8, open the Gradio address printed in the cell, run one question in the Live tab and open one record in the Replay tab. Save two or three screenshots for the report.
-4. Report: method, results table, the accuracy against cost figure (section 5.5), error analysis, limitations, related work.
-5. Freeze the code 4 hours before the deadline. Do not change `splits.json`, `data/pool.jsonl` or `results/`.
-
 ## Limitations
 
-- SlideVQA slides are 1024 px on the long side, so an overview of 768 tokens shows them without any loss and zoom has nothing to recover. This explains most of the results above.
+- SlideVQA slides are 1024 px on the long side, so an overview of 768 tokens shows them without any loss and zoom has nothing to recover. This explains most of the test results.
 - 120 test questions, one run, greedy decoding. Differences of a few points are within noise.
+- The 40 own and dense questions are ours, on 17 slides, and the dense slides were chosen for small print, which favours any method that reads small print.
 - The model is a 4-bit quantised 4B model on a 16 GB Mac. A larger model or a higher precision can change the order of the modes.
-- The answer match is strict (normalised exact match), so some correct answers in other wording count as errors. The share is measured in the error analysis.
+- Modes A to C use a text answer prompt and D, E use JSON. Mode F (A with the JSON prompt) shows no format effect.
+- The answer match is strict (normalised exact match), so some correct answers in other wording count as errors. About a third of the errors of D are of this kind.
+- The error categories come from samples of 30 errors per mode, assigned in one pass by an AI assistant and checked by one author.
 
 ## Related work
 
